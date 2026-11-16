@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shipyard - A Discord community for student builders</title>
+<title>Shipyard — A Discord community for student builders</title>
 <meta name="description" content="A loose community of high school students who ship real software. AI-assisted by default, any tools welcome. Any student can join.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0C0C0A; --bg-2:#141412; --bg-3:#1C1C1A;
@@ -23,7 +23,7 @@
 html{scroll-behavior:smooth}
 body{
   background:var(--bg); color:var(--ink);
-  font-family:'Space Grotesk', system-ui, sans-serif;
+  font-family:'Bricolage Grotesque', system-ui, sans-serif;
   font-size:16px; line-height:1.6;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -53,7 +53,7 @@ body::after {
 }
 
 a{color:inherit; text-decoration:none}
-.display{font-family:'Bricolage Grotesque', sans-serif; font-weight:800; letter-spacing:-0.035em; line-height:0.95}
+.display{font-family:'Bodoni Moda', serif; font-weight:700; letter-spacing:-0.02em; line-height:0.95}
 .wrap{max-width:1000px; margin:0 auto; padding:0 28px; position:relative; z-index:1}
 @media(max-width:540px){.wrap{padding:0 20px}}
 
@@ -63,7 +63,7 @@ a{color:inherit; text-decoration:none}
 .logo{display:flex; align-items:center; gap:12px}
 .logo-mark{width:34px; height:34px; background:var(--lime); display:grid; place-items:center; color:#0C0C0A; font-family:'JetBrains Mono', monospace; font-weight:700; font-size:20px; position:relative}
 .logo-mark::after{content:''; position:absolute; width:6px; height:6px; background:var(--rust); right:-3px; top:-3px}
-.logo-text{font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:22px; letter-spacing:-0.025em; line-height:1; text-align:left}
+.logo-text{font-family:'Bodoni Moda', serif; font-weight:600; font-size:24px; letter-spacing:-0.01em; line-height:1; text-align:left}
 .nav-desktop{display:flex; gap:28px}
 .nav-desktop a{color:var(--ink-dim); font-size:14px; font-weight:500; transition:color 0.15s}
 .nav-desktop a:hover{color:var(--ink)}
@@ -81,7 +81,7 @@ a{color:inherit; text-decoration:none}
 
 /* HERO */
 .hero{padding:120px 0 120px; position:relative}
-.hero-title{font-size:clamp(48px, 7vw, 84px); line-height:0.95; margin-bottom:40px; letter-spacing:-0.04em}
+.hero-title{font-family:'Bodoni Moda', serif; font-weight:700; font-size:clamp(48px, 7vw, 84px); line-height:0.95; margin-bottom:40px; letter-spacing:-0.02em}
 .hero-title .dot-end{color:var(--lime)}
 .hero-tagline{font-size:clamp(18px, 2vw, 22px); font-weight:500; line-height:1.5; color:var(--ink); max-width:620px; margin:0 auto 40px}
 .hero-tagline em{font-style:normal; color:var(--lime); font-weight:600}
@@ -116,6 +116,15 @@ a{color:inherit; text-decoration:none}
 .principle-list{list-style:none; display:inline-block; text-align:left}
 .principle-list li{font-size:14px; line-height:1.5; color:var(--ink-dim); padding:12px 0; display:block}
 
+/* STATS */
+.stats{padding:100px 0}
+.stats-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:800px; margin:0 auto}
+@media(max-width:540px){.stats-grid{grid-template-columns:1fr; gap:40px}}
+.stat-block{display:flex; flex-direction:column; align-items:center}
+.stat-num{font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:clamp(80px, 14vw, 140px); color:var(--lime); line-height:0.9; letter-spacing:-0.05em}
+.stat-label{font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-dim); font-size:14px; margin-top:12px; max-width:280px; margin-left:auto; margin-right:auto}
+.stats-tagline{margin-top:60px; color:var(--ink); max-width:600px; margin-left:auto; margin-right:auto; font-size:clamp(16px, 1.8vw, 20px); font-weight:500}
+
 /* CHANNELS */
 .channels{padding:100px 0}
 .channels-intro{font-size:clamp(16px, 1.6vw, 18px); line-height:1.6; color:var(--ink-dim); max-width:680px; margin:0 auto 48px}
@@ -143,10 +152,18 @@ a{color:inherit; text-decoration:none}
 .join-text{font-size:clamp(16px, 1.6vw, 18px); line-height:1.6; color:var(--ink-dim); max-width:540px}
 .join-text strong{color:var(--ink); font-weight:600}
 
+/* SUPPORT */
+.support{padding:100px 0}
+.support .section-head{margin-bottom:16px} /* Tighter gap for this specific section */
+.support-headline{font-family:'Bricolage Grotesque', sans-serif; font-weight:800; font-size:clamp(32px, 4vw, 48px); line-height:1; letter-spacing:-0.03em; margin-bottom:24px}
+.support-text{font-size:clamp(16px, 1.6vw, 18px); line-height:1.6; color:var(--ink-dim); max-width:600px; margin: 0 auto 32px; }
+.support-text strong{color:var(--ink); font-weight:600}
+
 /* FOOTER */
 footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64px 0 32px; text-align:left}
-.footer-top{display:grid; grid-template-columns:2fr 1fr 1fr; gap:48px; margin-bottom:48px; align-items:start}
-@media(max-width:768px){.footer-top{grid-template-columns:1fr; gap:32px}}
+.footer-top{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px; align-items:start}
+@media(max-width:768px){.footer-top{grid-template-columns:1fr 1fr; gap:32px}}
+@media(max-width:540px){.footer-top{grid-template-columns:1fr; gap:32px}}
 .footer-brand p{color:var(--ink-dim); font-size:14px; line-height:1.6; margin-top:20px; max-width:300px}
 .footer-col h4{font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:18px; font-weight:500}
 .footer-col ul{list-style:none}
@@ -176,7 +193,7 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
   <div class="wrap header-inner">
     <a href="#" class="logo">
       <div class="logo-mark">S</div>
-      <div class="logo-text">SHIPYARD</div>
+      <div class="logo-text">Shipyard</div>
     </a>
     <nav class="nav-desktop">
       <a href="#manifesto">What this is</a>
@@ -194,7 +211,7 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <h1 class="hero-title display">SHIPYARD<span class="dot-end">.</span></h1>
+    <h1 class="hero-title display">Shipyard<span class="dot-end">.</span></h1>
     
     <p class="hero-tagline">
       A Discord community for high schoolers turning ideas into <em>real, used software.</em> Any tools welcome.
@@ -287,6 +304,25 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-num" data-target="8">0</div>
+        <div class="stat-label">Builders shipping real things.</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-target="6">0</div>
+        <div class="stat-label">Countries represented today.</div>
+      </div>
+    </div>
+    <p class="stats-tagline">
+      Small enough to know every line of code. Big enough to span the globe.
+    </p>
   </div>
 </section>
 
@@ -389,6 +425,20 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
   </div>
 </section>
 
+<!-- SUPPORT / DONATE -->
+<section class="support" id="support">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Support the builders.</h2>
+    </div>
+    <h3 class="support-headline">Keep it free.</h3>
+    <p class="support-text">
+      Shipyard will remain free for students forever. Donations help cover infrastructure, hosting, domain renewals, and AI tool credits for members in need. <strong>Our fiscal sponsor, Hack Club Bank, processes donations.</strong>
+    </p>
+    <a href="https://hcb.hackclub.com/donations/start/shipyard" target="_blank" rel="noopener noreferrer" class="cta-primary">Donate to Shipyard <span class="arrow">→</span></a>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -396,7 +446,7 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
       <div class="footer-brand">
         <a href="#" class="logo">
           <div class="logo-mark">S</div>
-          <div class="logo-text">SHIPYARD</div>
+          <div class="logo-text">Shipyard</div>
         </a>
         <p>A loose community of high school students who ship real software. Just a Discord server, run by students.</p>
       </div>
@@ -415,10 +465,16 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://hcb.hackclub.com/donations/start/shipyard" target="_blank" rel="noopener noreferrer">Donate</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 SHIPYARD · STUDENT-RUN</span>
+      <span>© 2026 Shipyard</span>
     </div>
   </div>
 </footer>
@@ -431,6 +487,7 @@ footer{background:rgba(12, 12, 10, 0.7); backdrop-filter:blur(10px); padding:64p
   <a href="#channels">Channels</a>
   <a href="#faq">FAQ</a>
   <a href="https://discord.gg/q4V8FezR6y" target="_blank" rel="noopener noreferrer">Join</a>
+  <a href="https://hcb.hackclub.com/donations/start/shipyard" target="_blank" rel="noopener noreferrer">Donate</a>
 </div>
 
 <!-- THREE.JS SCRIPT -->
@@ -567,6 +624,41 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// Count up animation for stats
+const statsSection = document.getElementById('stats');
+if (statsSection) {
+  const statNums = statsSection.querySelectorAll('.stat-num');
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        statNums.forEach(stat => {
+          const target = parseInt(stat.getAttribute('data-target'), 10);
+          // Duration decreases as target increases (more number = faster)
+          const duration = 2000 - (target * 100); // 8: 1200ms, 6: 1400ms
+          const startTime = performance.now();
+
+          const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const current = Math.floor(progress * target);
+            stat.textContent = current;
+            
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            } else {
+              stat.textContent = target; // Ensure exact target is reached
+            }
+          };
+          requestAnimationFrame(animate);
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  statsObserver.observe(statsSection);
+}
 </script>
 
 </body>
